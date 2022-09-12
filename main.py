@@ -71,7 +71,7 @@ def categories_csv():
 # fonction pour obtenir la liste des livres pour l'ensemble du site
 def list_of_books_site():
     # boucle sur les 50 pages du site
-    for i in range(5):
+    for i in range(51):
         # url de base pour la pagination
         url_catalogue = 'https://books.toscrape.com/catalogue/'
         # permet de reconstituer url site pour chaque page
