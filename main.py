@@ -11,6 +11,7 @@ import wget # pour le téléchargement des images
 # url de base pour les fonctions
 url_site = 'https://books.toscrape.com' 
 
+
 # gestion des fichiers pour le téléchargement
 CSV_FOLDER = 'CSV/'
 IMAGES_FOLDER = 'Images/'
@@ -23,8 +24,10 @@ if not os.path.exists(IMAGES_FOLDER):
 
 # liste de l'ensemble des catégories du site
 categories_index = []
+
 # liste des livres pour l'ensemble du site
 link_books = []
+
 # liste des informations pour un livre
 informations_book = []
 
@@ -61,11 +64,13 @@ def categories_csv():
         # en-tête fichier csv pour informations book
         en_tete = 'product_page_url', 'category', 'title', 'image_url', 'product_description', 'universal_ product_code', 'price_including_tax', 'price_excluding_tax', 'number_available', 'review_rating'
         print(category_name)
+        
 
         # création d'un fichier csv par catégorie avec en-tête 
         with open( CSV_FOLDER + category_name +'.csv','w', newline='') as csv_file :
             writer = csv.writer( csv_file, delimiter=',')
             writer.writerow(en_tete)
+        
         
 
 # fonction pour obtenir la liste des livres pour l'ensemble du site
@@ -91,6 +96,7 @@ def list_of_books_site():
     time.sleep(3) 
 
     return (link_books)
+
 
             
 # fonction pour obtenir les informations  de chaque livre du site pour placement dans dossier csv
@@ -125,10 +131,14 @@ def list_of_books_information_site():
         
             print(informations_book)
 
+            
             # intègre le livre avec ses informations au fichier csv de la catégorie qui lui correspond
             with open( CSV_FOLDER + category_name +'.csv','a', newline='') as csv_file :
                 csv_file.write(informations_book)
 
+                
+                
+                
 # fonction pour le téléchargement de chaque image avec intégration dans son dossier catégorie            
 def image_names():
         # boucle sur la liste des livres
@@ -158,6 +168,7 @@ def image_names():
             # téléchargement des images
             wget.download(link_image, out= category_image + str(title_image))
 
+            
             
             
 
