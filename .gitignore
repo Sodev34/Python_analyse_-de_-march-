@@ -1,0 +1,13 @@
+/env
+
+.idea/
+
+.vscode/
+
+CSV
+
+Images
+
+*.jpg
+
+.DS_Store
