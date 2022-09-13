@@ -6,7 +6,7 @@ Le programme permet d'extraire pour tous les livres disponibles un ensemble d'in
 Les informations devront ensuite être enregistrées dans des fichiers csv correspondant a chacune des catégories<br>de livre pour plus de lisibilité.<br>
 Il sera fait de même pour les images de couvertures des livres qui seront classer de la même manière dans<br> un fichier image avec comme titre celui du livre pour chaque couverture de livre présent sur le site.
 
-## Création de l'environnement virtuel :
+## Création de l'environnement virtuel avec Python 3.9.12:
 
     python3 -m venv env
 
